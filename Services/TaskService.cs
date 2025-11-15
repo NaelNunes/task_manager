@@ -14,7 +14,7 @@ namespace task_manager.Services
             _context = context;
         }
 
-        public async Task<List<Task>> GetAllTasksAsync()
+        public async Task<IEnumerable<Task>> GetAllTasksAsync()
         {
             return await _context.Tasks.ToListAsync();
         }
